@@ -11,10 +11,36 @@ export default function BookTest() {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      // API call to backend
-      await axios.post('https://lnpathlogy.onrender.com/api/bookings', data);
+      // Map form data to backend schema
+      const payload = {
+        name: data.name,
+        phone: data.phone,
+        email: data.email || '',
+        date: data.preferredDate || new Date().toISOString().split('T')[0],
+        time: 'Not specified',
+        address: data.address,
+        tests: [data.testRequired],
+        packages: []
+      };
       
-      toast.success('Booking request submitted successfully! We will contact you soon.');
+      // API call to backend
+      await axios.post('https://lnpathlogy.onrender.com/api/bookings', payload);
+      
+      toast.success('Booking saved! Redirecting to WhatsApp...');
+      
+      // WhatsApp Integration
+      const messageText = `*New Booking Request*
+Name: ${data.name}
+Phone: ${data.phone}
+Type: ${data.bookingType}
+Test/Package: ${data.testRequired}
+Preferred Date: ${data.preferredDate || 'Not specified'}
+Address: ${data.address}
+Notes: ${data.message || 'None'}`;
+
+      const whatsappUrl = `https://wa.me/918815832425?text=${encodeURIComponent(messageText)}`;
+      window.open(whatsappUrl, '_blank');
+      
       reset();
     } catch (error) {
       toast.error('Failed to submit booking. Ensure backend is running.');
