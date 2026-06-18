@@ -59,7 +59,7 @@ export default function Contact() {
                   <Clock className="w-6 h-6 text-[var(--primary)] mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Working Hours</h3>
-                    <p className="text-gray-600 mt-1">Mon - Sat: 7:00 AM - 9:00 PM<br/>Sunday: 8:00 AM - 2:00 PM</p>
+                    <p className="text-gray-600 mt-1">Sun - Fri: 7:30 AM - 10:00 PM<br/>Saturday: 7:30 AM - 2:00 PM</p>
                   </div>
                 </li>
               </ul>

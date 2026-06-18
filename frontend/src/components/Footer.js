@@ -48,12 +48,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Opening Hours</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center justify-between border-b border-gray-700 pb-2">
-                <span>Mon - Sat:</span>
-                <span>7:00 AM - 9:00 PM</span>
+                <span>Sun - Fri:</span>
+                <span>7:30 AM - 10:00 PM</span>
               </li>
               <li className="flex items-center justify-between border-b border-gray-700 pb-2">
-                <span>Sunday:</span>
-                <span>8:00 AM - 2:00 PM</span>
+                <span>Saturday:</span>
+                <span>7:30 AM - 2:00 PM</span>
               </li>
               <li className="mt-4">
                 <Link href="/book-test" className="inline-block w-full text-center bg-[var(--primary)] text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
