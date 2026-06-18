@@ -12,7 +12,7 @@ export default function BookTest() {
     setIsSubmitting(true);
     try {
       // API call to backend
-      await axios.post('http://localhost:5000/api/bookings', data);
+      await axios.post('https://lnpathlogy.onrender.com/api/bookings', data);
       
       toast.success('Booking request submitted successfully! We will contact you soon.');
       reset();

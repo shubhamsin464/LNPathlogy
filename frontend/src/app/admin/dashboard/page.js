@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Users, Activity, Package, LogOut, Plus, Trash2, Edit } from 'lucide-react';
 import Link from 'next/link';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://lnpathlogy.onrender.com/api';
 
 export default function AdminDashboard() {
   const router = useRouter();
