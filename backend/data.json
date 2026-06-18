@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "admin@lnpathology.com",
+      "password": "$2b$10$4ClKDtRk.cP9.mKreALh3u2/DR0wCTvFAiykRrYFK6Zj8VQ1Bhbze",
+      "role": "admin",
+      "_id": "kacxg5xxqmqjh8adl",
+      "createdAt": "2026-06-18T12:29:08.361Z",
+      "updatedAt": "2026-06-18T12:29:08.362Z"
+    }
+  ],
+  "bookings": [],
+  "tests": [],
+  "packages": [],
+  "testimonials": [],
+  "contactRequests": [],
+  "reports": []
+}
